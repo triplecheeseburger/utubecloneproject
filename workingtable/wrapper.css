@@ -1,6 +1,18 @@
 .wrapper {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 100px 100px 100px;
+    width: 900px;
+    height: 750px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 20px 20px
+}
+
+.thumbnail {
+    text-align: center;
+}
+
+.thumb_img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
