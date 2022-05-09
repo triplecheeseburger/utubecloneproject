@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clippers</title>
+    <link rel="stylesheet" type="text/css" href="wrapper.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="thumbnail">
+        <img src="https://placeimg.com/1200/600/animals" alt="random animal image" title="random animal image 1">
+        <h4>random animal image</h4>
+        <p>
+            This is random animal image.<br>
+            Part of my project.
+        </p>
+    </div>
+    <div class="thumbnail">
+        <img src="https://placeimg.com/1200/600/arch" alt="random architecture image" title="random architecture image">
+        <h4>random architecture image</h4>
+        <p>
+            This is random architecture image.<br>
+            Part of my project.
+        </p>
+    </div>
+    <div class="thumbnail">
+        <img src="https://placeimg.com/1200/600/nature" alt="random nature image" title="random nature image">
+        <h4>random nature image</h4>
+        <p>
+            This is random nature image.<br>
+            Part of my project.
+        </p>
+    </div>
+    <div class="thumbnail">
+        <img src="https://placeimg.com/1200/600/people" alt="random people image" title="random people image">
+        <h4>random people image</h4>
+        <p>
+            This is random people image.<br>
+            Part of my project.
+        </p>
+    </div>
+    <div class="thumbnail">
+        <img src="https://placeimg.com/1200/600/tech" alt="random tech image" title="random tech image">
+        <h4>random tech image</h4>
+        <p>
+            This is random tech image.<br>
+            Part of my project.
+        </p>
+    </div>
+    <div class="thumbnail">
+        <img src="https://placeimg.com/1200/600/animals/sepia" alt="random animal image(sepia)" title="random animal image(sepia)">
+        <h4>random animal image(sepia)</h4>
+        <p>
+            This is random animal image.<br>
+            This one has sepia tone.
+        </p>
+    </div>
+    <div class="thumbnail">
+        <img src="https://placeimg.com/1200/600/arch/sepia" alt="random architecture image(sepia)" title="random architecture image(sepia)">
+        <h4>random architecture image(sepia)</h4>
+        <p>
+            This is random architecture image.<br>
+            This one has sepia tone.
+        </p>
+    </div>
+    <div class="thumbnail">
+        <img src="https://placeimg.com/1200/600/nature/sepia" alt="random nature image(sepia)" title="random nature image(sepia)">
+        <h4>random nature image(sepia)</h4>
+        <p>
+            This is random nature image.<br>
+            This one has sepia tone.
+        </p>
+    </div>
+    <div class="thumbnail">
+        <img src="https://placeimg.com/1200/600/people/sepia" alt="random people image(sepia)" title="random people image(sepia)">
+        <h4>random people image(sepia)</h4>
+        <p>
+            This is random people image.<br>
+            This one has sepia tone.
+        </p>
+    </div>
+</div>
+<script>
+    const thumbTitles = document.querySelectorAll('h4');
+    function titleAlert() {
+        alert(this.innerHTML);
+    }
+    for (let i = 0; i < thumbTitles.length; i++) {
+        thumbTitles[i].addEventListener('click', titleAlert);
+    }
+</script>
+
+</body>
+</html>
+
+
+
