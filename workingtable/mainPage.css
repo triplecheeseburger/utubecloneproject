@@ -1,10 +1,26 @@
+body {
+    width: 720px;
+}
+
+header {
+    font-family: 'Gruppo', cursive;
+    margin-left: 5px;
+}
+
+header .logo {
+    font-size: 20px;
+}
+
+header .logo .title {
+    font-size: 30px;
+}
+
 .wrapper {
     display: grid;
-    width: 640px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-row-gap: 30px;;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .thumbnail {
@@ -17,7 +33,7 @@
 
 .thumb_img {
     width: 100%;
-    max-width: 200px;
+    max-width: 210px;
     height: auto;
     border-radius: 10px;
 }
