@@ -1,0 +1,35 @@
+.videoPage {
+    width: 720px;
+}
+
+.videoPage video {
+    display: block;
+    width: 720px;
+    height: 480px;
+    background-color: darkslategrey;
+}
+
+.videoPage .videoText {
+    display: block;
+    margin-left: 10px;
+}
+
+.videoPage .videoText .videoTitle h2 {
+    width: 720px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.videoPage .videoContent {
+    display: inline-block;
+    width: 720px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.2;
+    height: 4.8em;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
