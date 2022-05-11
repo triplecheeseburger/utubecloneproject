@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clippers</title>
+    <link rel="stylesheet" type="text/css" href="mainPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2fd069beae.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-paperclip"></i>
+        <span class="title">Clippers</span>
+    </div>
+</header>
+<hr>
+<div class="wrapper">
+    <script>
+        let birdSeries = [
+            '뒷마당을지키는새',
+            '부리가큰새',
+            '슬피우는새',
+            '신나게웃는새',
+            '알을지키는새',
+            '야생검은새',
+            '야생분홍새',
+            '정처없이떠도는새',
+            '한번만우는새',
+            '한입에꿀꺽하는새'
+        ];
+
+        function goVideo() {
+            location.href = "videoPage.html?video=" + this.id;
+        }
+
+        for (let i = 0; i < birdSeries.length; i++) {
+            document.write(
+                '<div class="thumbnail">' +
+                '   <img class="thumb_img" src="../새시리즈/' + birdSeries[i] + '.jpg" alt="' + birdSeries[i] + '" title="' + birdSeries[i] + '" id="' + birdSeries[i] + '">' +
+                '<h4 class="thumb_title" id="' + birdSeries[i] + '">' + birdSeries[i] + '</h4>' +
+                '</div>'
+            )
+        }
+        let titles = document.querySelectorAll('h4');
+        let imgs = document.querySelectorAll('img');
+
+        for (let i = 0; i < birdSeries.length; i++) {
+            titles[i].addEventListener('click', goVideo);
+            imgs[i].addEventListener('click', goVideo);
+        }
+    </script>
+</div>
+</body>
+</html>
+
+
+

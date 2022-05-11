@@ -1,0 +1,43 @@
+body {
+    width: 720px;
+}
+
+header {
+    font-family: 'Gruppo', cursive;
+    margin-left: 5px;
+}
+
+header .logo {
+    font-size: 20px;
+}
+
+header .logo .title {
+    font-size: 30px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 30px;;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    text-align: center;
+}
+
+.thumbnail h4 {
+    margin-bottom: 0px;
+}
+
+.thumb_title {
+    cursor: pointer;
+}
+
+.thumb_img {
+    width: 100%;
+    max-width: 210px;
+    height: auto;
+    border-radius: 10px;
+}
