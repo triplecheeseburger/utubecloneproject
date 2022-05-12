@@ -1,5 +1,5 @@
 body {
-    width: 720px;
+    width: calc(100%);
 }
 
 header {
@@ -19,8 +19,9 @@ header .logo .title {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-row-gap: 30px;;
+    grid-row-gap: 10px;;
     margin-top: 20px;
+    margin-right: 5px;
 }
 
 .thumbnail {
@@ -28,7 +29,8 @@ header .logo .title {
 }
 
 .thumbnail h4 {
-    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .thumb_title {
@@ -36,8 +38,7 @@ header .logo .title {
 }
 
 .thumb_img {
-    width: 100%;
-    max-width: 210px;
+    width: 94%;
     height: auto;
     border-radius: 10px;
 }

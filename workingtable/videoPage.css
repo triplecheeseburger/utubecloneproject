@@ -1,35 +1,50 @@
-.videoPage {
-    width: 720px;
+:root {
+    --width-full: calc(100%);
 }
 
-.videoPage video {
+body {
+    margin: 0px;
+}
+
+.videoPage {
+    width: var(--width-full);
+}
+
+.videoPage .videoMain video {
     display: block;
-    width: 720px;
-    height: 480px;
+    width: var(--width-full);
+    height: 70vh;
     background-color: darkslategrey;
 }
 
 .videoPage .videoText {
     display: block;
-    margin-left: 10px;
+    margin: 20px 10px 10px 10px;
 }
 
 .videoPage .videoText .videoTitle h2 {
-    width: 720px;
+    /*width: 720px;*/
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.videoPage .videoContent {
+.videoPage .videoContent .content {
     display: inline-block;
-    width: 720px;
+    /*width: 720px;*/
+    line-height: 1.2;
+}
+
+.videoPage .videoContent .content.more {
+    height: 4.8em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
-    line-height: 1.2;
-    height: 4.8em;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+}
+
+.videoPage .videoContent .moreBtn {
+    float: right;
 }
