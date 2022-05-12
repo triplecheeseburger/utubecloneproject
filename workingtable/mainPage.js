@@ -16,14 +16,24 @@ function goVideo() {
 	location.href = "videoPage.html?video=" + this.id;
 }
 
+let wrapper = document.querySelector('.wrapper');
+
 for (let i = 0; i < birdSeries.length; i++) {
-	document.write(
+	wrapper.innerHTML +=
 		'<div class="thumbnail">' +
 		'   <img class="thumb_img" src="../새시리즈/' + birdSeries[i] + '.jpg" alt="' + birdSeries[i] + '" title="' + birdSeries[i] + '" id="' + birdSeries[i] + '">' +
 		'<h4 class="thumb_title" id="' + birdSeries[i] + '">' + birdSeries[i] + '</h4>' +
-		'</div>'
-	)
+		'</div>';
 }
+
+// for (let i = 0; i < birdSeries.length; i++) {
+// 	document.write(
+// 		'<div class="thumbnail">' +
+// 		'   <img class="thumb_img" src="../새시리즈/' + birdSeries[i] + '.jpg" alt="' + birdSeries[i] + '" title="' + birdSeries[i] + '" id="' + birdSeries[i] + '">' +
+// 		'<h4 class="thumb_title" id="' + birdSeries[i] + '">' + birdSeries[i] + '</h4>' +
+// 		'</div>'
+// 	)
+// }
 let titles = document.querySelectorAll('h4');
 let imgs = document.querySelectorAll('img');
 
