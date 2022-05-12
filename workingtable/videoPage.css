@@ -6,6 +6,11 @@ body {
     margin: 0px;
 }
 
+.videoGrid {
+    display: grid;
+    grid-template-columns: 1fr 275px;
+}
+
 .videoPage {
     width: var(--width-full);
 }

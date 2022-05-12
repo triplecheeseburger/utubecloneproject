@@ -4,56 +4,38 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="videoPage.css">
+    <script src="videoPage.js" defer></script>
 </head>
 <body>
-<div class="videoPage">
-    <script>
-        const url = new URL(window.location.href);
-        const urlParams = url.searchParams;
-        const videoName = urlParams.get('video');
-        document.title = videoName;
-        document.write('<div class="videoMain">' +
-            '<video class="video" ' +
-            'src="../새시리즈/' + videoName + '.mp4" ' +
-            'poster="../새시리즈/' + videoName + '.jpg" ' +
-            'title="' + videoName + '" ' +
-            'controls></video>' +
-            '</div>')
-        document.write(
-            '<div class="videoText">' +
-            '   <div class="videoTitle">' +
-            '       <h2>' + videoName + '</h2>' +
-            '   </div>' +
-            '<hr>' +
-            '   <div class="videoContent">\n' +
-            '        <span class="content more">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a dapibus enim. Sed a tincidunt sapien, at congue odio. Mauris ornare sed ex ac gravida. Etiam et urna nec mi aliquet sollicitudin. Etiam eget luctus metus. Nulla laoreet mauris turpis, non rutrum dolor malesuada vel. Ut a dapibus tellus, eget facilisis urna. Integer rhoncus quis ipsum vitae vestibulum. Phasellus dictum congue ex. Cras aliquam sagittis accumsan. Quisque posuere est eget velit lobortis ornare. Sed imperdiet tincidunt metus eu condimentum. In gravida, sem vitae scelerisque lacinia, urna massa rutrum mi, vehicula ullamcorper erat leo ut quam. Maecenas posuere nisl eu mi eleifend pulvinar et sit amet sem.\n' +
-            '        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam auctor velit in lacinia feugiat. Fusce blandit, elit id iaculis interdum, neque mi vulputate diam, eu ornare est mi laoreet enim. Nullam eget massa non tellus congue tempus et quis ex. Ut neque lorem, viverra in cursus at, venenatis nec neque. Vestibulum facilisis neque non tortor elementum gravida. Vestibulum sodales lectus a felis congue, eget lacinia magna tempor.\n' +
-            '        Quisque consequat nec risus nec aliquet. Etiam et neque ut nunc sodales euismod eget a justo. Ut tellus sapien, rutrum ut eros id, ultricies molestie massa. Etiam vitae justo dui. Nunc condimentum volutpat dui, ac vulputate turpis aliquet sed. Aenean eu ultricies dui. Cras tortor enim, vehicula sed eros nec, lacinia vehicula ipsum. Curabitur vulputate sapien in sem convallis consectetur. Nulla orci erat, ultricies non fringilla sed, lacinia ac massa. Maecenas egestas nec tellus nec elementum. Nam non erat odio. Nunc quis urna sodales, convallis tortor ut, elementum ipsum. Morbi porttitor neque nunc, nec pellentesque nunc sollicitudin at. Nunc id leo condimentum, fringilla ante sed, cursus turpis.\n' +
-            '        Nam feugiat, risus dapibus eleifend mattis, turpis augue suscipit dolor, a porttitor nulla dolor et mauris. Nulla a egestas ante, quis aliquam tellus. Quisque in metus euismod, aliquet mauris in, tristique urna. In vel enim et quam eleifend faucibus quis ac ligula. Suspendisse maximus eros nec malesuada posuere. Cras eget viverra lacus, ut ullamcorper metus. Mauris condimentum varius suscipit. Suspendisse sapien dolor, congue ullamcorper egestas eget, iaculis sit amet lorem. Nam ac commodo lectus, quis efficitur augue. Morbi ultricies eros libero, in mollis libero vehicula hendrerit. Duis tincidunt magna a orci varius scelerisque.\n' +
-            '        Duis consequat lacus a cursus venenatis. Nunc porttitor elit eu velit mattis, et aliquam dui dignissim. Mauris ultricies diam a lectus laoreet feugiat. Pellentesque iaculis nibh urna. Quisque placerat massa in nisl fermentum facilisis. Praesent vitae elit porta, blandit tellus non, iaculis diam. Phasellus consequat volutpat ipsum a viverra. Fusce maximus in quam sed tincidunt. Mauris quam tortor, condimentum ut eleifend id, scelerisque rutrum sem.\n' +
-            '        Nam rutrum elit vel felis commodo, venenatis fermentum lacus ornare. Sed lacinia, odio quis volutpat maximus, nisl justo porttitor mi, et tristique magna tortor at ligula. Suspendisse potenti. Mauris nec tincidunt velit. Sed pretium nulla arcu, rutrum tristique ex pharetra ut. Maecenas condimentum dui sollicitudin ipsum molestie efficitur. Duis nec pharetra dui. Aenean tristique nulla eget magna condimentum, vitae porttitor nisl pulvinar. Praesent interdum nisi ut nisl lacinia consequat. Nunc nibh massa, euismod ut magna sed, malesuada dictum metus. Ut vehicula libero velit, dictum ornare ex pharetra et. Vestibulum porttitor consequat urna, quis suscipit nibh ultricies eget. Nullam laoreet tristique felis eget aliquam. Nulla cursus euismod urna, ut fringilla lectus cursus vel.\n' +
-            '        Nam ac varius odio. Duis lacinia pretium nibh, a ultricies arcu egestas non. Morbi erat nisl, porta sed diam at, imperdiet congue diam. Cras vulputate magna sit amet magna pulvinar posuere. Vivamus augue lacus, sodales ac luctus sed, elementum vitae leo. Mauris tincidunt aliquam est. Nunc augue ipsum, vestibulum id mollis id, mattis id arcu. Praesent vel urna urna. Maecenas tellus sapien, hendrerit in urna sed, tincidunt efficitur lacus.\n' +
-            '        Sed lobortis et enim in aliquet. Phasellus semper leo vel tortor volutpat, vel egestas ex porta. Donec tempus non tellus ut interdum. Aenean est augue, bibendum sed lacus sit amet, luctus ultrices nulla. Suspendisse ultricies lorem ac mauris cursus venenatis. Fusce fringilla eu sem nec pulvinar. Nulla facilisi. Cras vitae nisi varius, ultricies libero venenatis, consequat est.\n' +
-            '        Praesent vitae erat vel elit scelerisque cursus. Sed at vehicula magna, ut accumsan tellus. Sed mollis ornare justo, sit amet molestie nunc molestie nec. Curabitur at lacus eu metus ornare hendrerit id at orci. Nam porttitor quam mi. Cras diam purus, convallis faucibus porttitor ac, vulputate sit amet lectus. Nulla mattis urna nisi, nec aliquam augue ornare sed. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse consectetur rutrum consectetur. Proin vestibulum, lacus ut suscipit tincidunt, velit dui sagittis felis, sed elementum justo urna eu ex. Etiam est magna, fringilla id lacus a, blandit convallis nulla.\n' +
-            '        Vestibulum pharetra metus eget auctor molestie. In hac habitasse platea dictumst. Donec scelerisque lectus vel lorem tempor rhoncus. Integer massa est, rutrum sed ex sed, ultricies lobortis odio. Fusce lectus odio, varius a libero id, tincidunt vulputate eros. Aenean suscipit nisl eget magna sodales, ac finibus neque tincidunt. Nullam hendrerit, nibh ut mattis porta, velit libero feugiat sem, eu lacinia diam dui eu nulla. Integer eu gravida sem. Mauris nisl metus, malesuada sed cursus vitae, hendrerit id est. Nam feugiat felis tellus, eu porta eros mattis nec.\n' +
-            '        Fusce ultrices, justo ac suscipit rhoncus, dolor ligula rhoncus nibh, sed semper erat erat id magna. Aliquam velit purus, maximus in maximus eu, feugiat vel sem. Fusce ultrices eleifend augue. Maecenas in mauris ullamcorper, suscipit ligula quis, dictum ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean consequat vulputate mi, vel pellentesque tellus egestas vitae. Praesent non orci et ipsum interdum fringilla vel non purus. Sed fermentum sapien sit amet mauris dapibus, non tristique ante congue.\n' +
-            '        Cras interdum lectus nisl, vel tempor nisi commodo vitae. Etiam molestie eleifend ipsum. Vestibulum pulvinar sapien ut laoreet ullamcorper. Sed eu metus vitae ante blandit maximus et non neque. Duis in tristique magna. Curabitur malesuada imperdiet imperdiet. Curabitur turpis ex, fringilla nec molestie eget, rhoncus ac magna. Sed tempus.\n</span>' +
-            '        <button class="moreBtn">more</button>' +
-            '   </div>' +
-            '</div>')
-        const moreBtn = document.querySelector('.videoPage .videoContent .moreBtn');
-        const content = document.querySelector('.videoPage .videoContent .content');
-
-        moreBtn.addEventListener('click', () => {
-            if (moreBtn.innerHTML === 'more')
-            {
-                moreBtn.innerHTML = 'less';
-            }
-            else if (moreBtn.innerHTML === 'less')
-                moreBtn.innerHTML = 'more';
-            content.classList.toggle('more');
-        });
-    </script>
+<div class="videoGrid">
+    <div class="videoPage">
+        <div class="videoMain">
+            <video class="video" controls></video>
+        </div>
+        <div class="videoText">
+            <div class="videoTitle">
+                <h2></h2>
+            </div>
+            <hr>
+            <div class="videoContent">
+                <span class="content more">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit dolor eget eros iaculis, et rhoncus erat sodales. Nunc ex nisl, bibendum ac metus vel, porta cursus nulla. Integer lobortis sagittis lacus, et sagittis tellus iaculis eget. Fusce mauris nibh, tincidunt sit amet lacus id, molestie scelerisque orci. Maecenas at elementum neque, vel vulputate nisi. Cras egestas magna vel ligula efficitur pellentesque. Praesent ligula tellus, placerat et porta et, scelerisque ac elit. Curabitur ullamcorper tortor rhoncus mauris iaculis ultrices. Nullam iaculis ultrices porta. Maecenas volutpat tellus dui, vel volutpat mi bibendum id. Donec sed lorem eget libero venenatis vulputate nec a libero. Nullam interdum turpis enim, id egestas tortor rutrum eu. Curabitur ornare ac nunc ac ultrices. Suspendisse pulvinar auctor ex, et suscipit ex porta id. Aliquam in mi non nulla facilisis dapibus vitae eu eros. Curabitur at magna sem.
+                    Etiam consectetur quam ipsum. Fusce nec augue cursus, tincidunt orci non, imperdiet felis. Pellentesque risus quam, sollicitudin vel cursus vitae, imperdiet eget purus. Pellentesque ex risus, semper vitae aliquet eu, egestas at nulla. Ut a fringilla erat, sed lacinia eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque eget tempor ipsum. Praesent tempus dolor purus, eget egestas enim malesuada ac. Donec nec turpis suscipit, molestie tortor et, hendrerit nisl. Cras bibendum sapien id semper mollis. Sed auctor metus id massa commodo fermentum.
+                    Phasellus bibendum, elit non euismod auctor, eros odio rhoncus lacus, nec porttitor arcu dui nec purus. Nulla facilisi. Aliquam nec neque odio. Donec sit amet convallis sapien. Ut iaculis dictum tortor, eget consectetur tortor volutpat eget. Aenean at elementum felis, ac bibendum turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse fermentum libero suscipit erat pretium maximus. Etiam lacinia faucibus tincidunt. Phasellus aliquam ex lacus, in tristique augue sagittis quis. Nulla sit amet scelerisque turpis. Mauris nec dapibus diam, vitae vestibulum justo.
+                    Ut posuere arcu tortor, a congue elit sodales quis. Praesent luctus mauris tempus bibendum bibendum. Morbi varius sapien a ultricies finibus. Aliquam erat volutpat. Duis eu semper nisl. Pellentesque elit sapien, viverra vel augue sed, facilisis dignissim risus. Nulla vel pulvinar orci, in pulvinar mauris. Pellentesque vitae sapien a nibh laoreet accumsan quis eu elit. Praesent a nisi nec libero finibus iaculis. Integer mauris metus, fringilla non scelerisque quis, sollicitudin fermentum velit.
+                    Curabitur elit orci, viverra at nunc ac, tincidunt tincidunt metus. Pellentesque nec tortor tempor, posuere leo at, cursus ligula. Suspendisse eleifend hendrerit lacus, in bibendum nisi ornare quis. Cras eget maximus mauris. Maecenas lacus quam, gravida convallis efficitur quis, finibus nec ligula. Suspendisse commodo libero id ex congue, a blandit justo tristique. Nulla imperdiet nec libero sed convallis. Ut nibh neque, fermentum vitae vulputate in, aliquet ac ipsum. Donec tortor mauris, lacinia sit amet lacinia at, volutpat nec erat. In id elit non est condimentum semper id eget quam. Nunc porta nisi erat, nec finibus urna molestie eget.
+                    Curabitur molestie gravida pharetra. Duis sollicitudin, eros non lobortis porttitor, lacus sem dapibus libero, at sollicitudin neque augue vel arcu. Morbi mattis aliquam massa consequat lobortis. Pellentesque nec consequat mi. Aenean id ex sit amet elit hendrerit accumsan. Nullam vel ligula quis ligula varius vehicula at et ipsum. Pellentesque quis libero quis sem rhoncus porta. Maecenas mattis hendrerit turpis, nec mollis leo facilisis eget. Nunc rhoncus, ante eu commodo tristique, nisi orci ultricies nisl, in cursus mauris urna non nisi. Nunc vitae tristique enim. Vivamus suscipit turpis diam, et finibus mi tempor in. Vivamus imperdiet feugiat nulla sit amet faucibus. Phasellus ac accumsan massa. Suspendisse sagittis mi arcu, vitae rutrum justo tempus at.
+                    Suspendisse imperdiet turpis eros, in suscipit ligula bibendum blandit. Sed finibus ultricies enim eu consequat. Nulla eget ultrices risus. Integer ut congue leo. Maecenas in turpis vel sapien sagittis consequat quis vel metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras auctor erat nec quam tincidunt tristique. Maecenas ut tristique dolor. Integer eget facilisis erat. In hac habitasse platea dictumst. Nulla at neque at erat ultrices ornare. Vivamus et imperdiet leo.
+                    Suspendisse varius nibh nulla, quis finibus diam commodo id. Donec a nisl euismod, convallis arcu at, fringilla mauris. Maecenas blandit fermentum placerat. Vivamus at tincidunt nibh, ac condimentum est. Quisque lectus erat, congue nec risus suscipit, dictum rhoncus enim. In vestibulum, dolor quis mollis convallis, ante quam vulputate neque, in varius nunc lorem id purus. Donec efficitur lorem eu pulvinar sodales. Proin blandit ornare magna nec vulputate. Cras fermentum aliquam cursus. Donec eget nisl nec risus ornare porta venenatis ac lacus. Cras urna eros, fringilla in nisl nec, elementum volutpat lectus. Phasellus a vulputate nunc. Aenean feugiat nisl est, et scelerisque libero fringilla ut.
+                    Aenean at turpis mauris. Nam in nibh scelerisque justo elementum tempus. Praesent fermentum egestas ornare. Mauris ut erat vitae neque luctus dignissim non porttitor massa. Quisque auctor pretium velit sed ullamcorper. Suspendisse potenti. Donec a enim id ex sodales consectetur quis quis sem. Ut sodales tincidunt leo et gravida. Integer vel convallis sapien, et sagittis nibh. Nulla luctus laoreet nulla, eget dignissim odio congue non. Duis non pellentesque risus. Phasellus sit amet diam in mi ornare cursus. Nunc id risus eu risus hendrerit semper.
+                    Vivamus ut tortor risus. Nulla eleifend neque vel nisi porttitor cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut sed ipsum blandit, placerat dui eget, tempor neque. Donec non nulla sollicitudin, pharetra neque eget, congue tellus. Nulla placerat pharetra bibendum. Duis eget sodales tellus. Vivamus ipsum orci, vulputate vitae facilisis in, maximus eget ipsum. Quisque accumsan lectus ac leo sollicitudin, quis mattis elit dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    Proin convallis est posuere imperdiet facilisis. Suspendisse eleifend urna non risus ultrices tempus. Duis at ullamcorper sem. Sed luctus rhoncus erat ut porttitor. Morbi quis ipsum vitae nisl ultricies condimentum non ut elit. Nullam euismod sit amet eros quis consequat. Phasellus sapien augue, posuere maximus dui id, aliquet imperdiet nulla. Duis commodo risus vitae aliquet fringilla. Aliquam quis est.
+                </span>
+                <button class="moreBtn">more</button>
+            </div>
+        </div>
+    </div>
+    <div class="videoList"></div>
 </div>
 </body>
 </html>
