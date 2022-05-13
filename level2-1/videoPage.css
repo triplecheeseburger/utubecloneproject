@@ -1,0 +1,79 @@
+:root {
+    --width-full: calc(100%);
+}
+
+body {
+    margin: 0px;
+}
+
+.videoGrid {
+    display: grid;
+    grid-template-columns: 1fr 275px;
+}
+
+.videoPage {
+    width: var(--width-full);
+}
+
+.videoPage .videoMain video {
+    display: block;
+    width: var(--width-full);
+    height: 70vh;
+    background-color: darkslategrey;
+}
+
+.videoPage .videoText {
+    display: block;
+    margin: 20px 10px 10px 10px;
+}
+
+.videoPage .videoText .videoTitle h2 {
+    /*width: 720px;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.videoPage .videoContent .content {
+    display: inline-block;
+    /*width: 720px;*/
+    line-height: 1.2;
+}
+
+.videoPage .videoContent .content.more {
+    height: 4.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.videoPage .videoContent .moreBtn {
+    float: right;
+}
+
+.videoList {
+
+}
+
+.videoList h4 {
+    text-align: center;
+}
+
+.nextVideos {
+    display: grid;
+    grid-template-columns: 100px 175px;
+    margin-left: 5px;
+}
+
+.nextVideos img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.nextVideos p {
+    margin-left: 5px;
+}
