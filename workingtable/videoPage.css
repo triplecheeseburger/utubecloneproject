@@ -53,3 +53,27 @@ body {
 .videoPage .videoContent .moreBtn {
     float: right;
 }
+
+.videoList {
+
+}
+
+.videoList h4 {
+    text-align: center;
+}
+
+.nextVideos {
+    display: grid;
+    grid-template-columns: 100px 175px;
+    margin-left: 5px;
+}
+
+.nextVideos img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.nextVideos p {
+    margin-left: 5px;
+}
