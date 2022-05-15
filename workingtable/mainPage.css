@@ -19,6 +19,7 @@ header {
     padding-bottom: 10px;
     background-color: white;
     opacity: 0.97;
+    cursor: pointer;
 }
 
 header .logo {

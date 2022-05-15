@@ -1,3 +1,11 @@
+function goHome() {
+    location.href = "mainPage.html";
+}
+
+let homeButton = document.querySelector('header');
+
+homeButton.addEventListener('click', goHome);
+
 const url = new URL(window.location.href);
 const urlParams = url.searchParams;
 const videoName = urlParams.get('video');

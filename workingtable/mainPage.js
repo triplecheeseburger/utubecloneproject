@@ -1,3 +1,11 @@
+function goHome() {
+	location.href = "mainPage.html";
+}
+
+let homeButton = document.querySelector('header');
+
+homeButton.addEventListener('click', goHome);
+
 
 let birdSeries = [
 	['뒷마당을지키는새', 'https://drive.google.com/uc?export=download&id=1feS2PExCeuZz5CnQzSIDYnqAl8hZuT0Q', 'https://drive.google.com/uc?export=download&id=19we3Gz4GIzIeDFHlGrwA1Pkp6AS-FvZY'],
@@ -13,10 +21,6 @@ let birdSeries = [
 ];
 
 localStorage.setItem("key", JSON.stringify(birdSeries));
-
-function goHome() {
-	location.href = "mainPage.html";
-}
 
 function goVideo() {
 	location.href = "videoPage.html?video=" + this.id;
