@@ -4,11 +4,28 @@ const videoName = urlParams.get('video');
 
 document.title = videoName;
 
+let birdTemp = localStorage.getItem('key');
+let birdSeries = JSON.parse(birdTemp);
+
+let thisVideoIndex;
+
+for (let i = 0; i < birdSeries.length - 1; i++) {
+    if (birdSeries[i][0] === videoName)
+        thisVideoIndex = i;
+}
+
+let temp = birdSeries[thisVideoIndex];
+
 let videoTag = document.querySelector('.video');
 
-videoTag.setAttribute('src', '../새시리즈/' + videoName + '.mp4');
-videoTag.setAttribute('poster', '../새시리즈/' + videoName + '.jpg');
+videoTag.setAttribute('src', birdSeries[thisVideoIndex][2]);
+videoTag.setAttribute('poster', birdSeries[thisVideoIndex][1]);
 videoTag.setAttribute('title', videoName);
+
+birdSeries.splice(thisVideoIndex, 1);
+birdSeries.push(temp);
+
+localStorage.setItem("key", JSON.stringify(birdSeries));
 
 let videoTitleH2 = document.querySelector('.videoGrid .videoPage .videoText .videoTitle h2');
 videoTitleH2.innerHTML = videoName;
@@ -26,27 +43,32 @@ moreBtn.addEventListener('click', () => {
     content.classList.toggle('more');
 });
 
-let birdSeries = [
-    '뒷마당을지키는새',
-    '부리가큰새',
-    '슬피우는새',
-    '신나게웃는새',
-    '알을지키는새',
-    '야생검은새',
-    '야생분홍새',
-    '정처없이떠도는새',
-    '한번만우는새',
-    '한입에꿀꺽하는새'
-];
+let videoList = document.querySelector('.nextVideos');
 
-let videoList = document.querySelector('.videoList');
-
-for (let i = 0; i < birdSeries.length; i++) {
-    if (birdSeries[i] === videoName)
-        continue ;
+for (let i = 0; i < birdSeries.length - 1; i++) {
+    // if (i === thisVideoIndex)
+    //     continue ;
     videoList.innerHTML +=
-        '<div class="nextVideos">' +
-            '<img src="../새시리즈/' + birdSeries[i] + '.jpg">' +
-            '<p>' + birdSeries[i] + '</p>' +
+        '<div class="nextVideo">' +
+            '<img src="' + birdSeries[i][1] + '" id="' + birdSeries[i][0] + '">' +
+            '<div class="nextVideoTitle" id="' + birdSeries[i][0] + '">' + birdSeries[i][0] + '</div>' +
         '</div>';
+}
+
+function goNextVideo() {
+    location.replace("videoPage.html?video=" + birdSeries[0][0]);
+}
+
+videoTag.addEventListener('ended', goNextVideo);
+
+function goVideo() {
+    location.replace("videoPage.html?video=" + this.id);
+}
+
+let nextVideos = document.querySelectorAll('.nextVideo img');
+let videoTitles = document.querySelectorAll('.nextVideo .nextVideoTitle');
+
+for (let i = 0; i < nextVideos.length; i++) {
+    nextVideos[i].addEventListener('click', goVideo);
+    videoTitles[i].addEventListener('click', goVideo);
 }

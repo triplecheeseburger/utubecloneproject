@@ -1,5 +1,5 @@
 :root {
-    --width-full: calc(100%);
+    --width-full: 100%;
 }
 
 html {
@@ -8,13 +8,13 @@ html {
 }
 
 body {
-    width: calc(100%);
+    width: 100%;
     margin: 0;
     padding: 0;
 }
 
 header {
-    width: calc(100%);
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -34,7 +34,7 @@ header .logo .title {
 }
 
 .videoGrid {
-    padding-top: 40px;
+    padding-top: 39px;
     display: grid;
     grid-template-columns: 1fr 275px;
 }
@@ -83,25 +83,49 @@ header .logo .title {
 }
 
 .videoList {
+    overflow-y: scroll;
+    height: 95vh;
+    padding-right: 20px;
+    border-style:none;
 
+    scrollbar-face-color:#FFFFFF;
+    scrollbar-3dlight-color:#FFFFFF;
+    scrollbar-highlight-color:#FFFFFF;
+    scrollbar-shadow-color:#000000;
+    scrollbar-darkshadow-color:#FFFFFF;
+    scrollbar-arrow-color:#000000;
+    scrollbar-track-color:#FFFFFF; }
+
+.videoList .playList {
+    width: 275px;
+    position: fixed;
+    background-color: white;
+    opacity: 0.97;
 }
 
-.videoList h4 {
+.videoList .playList h4 {
     text-align: center;
 }
 
 .nextVideos {
+    padding-top: 65px;
+}
+
+.nextVideo {
     display: grid;
-    grid-template-columns: 100px 175px;
+    grid-template-columns: 100px 170px;
     margin-left: 5px;
 }
 
-.nextVideos img {
+.nextVideo img {
     width: 100px;
     height: auto;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
-.nextVideos p {
+.nextVideo .nextVideoTitle {
     margin-left: 5px;
+    padding-top: calc(50% - 1em / 2);
+    cursor: pointer;
 }
