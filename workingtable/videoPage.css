@@ -9,6 +9,7 @@ html {
 
 body {
     width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -35,7 +36,7 @@ header .logo .title {
 }
 
 .videoGrid {
-    padding-top: 39px;
+    padding-top: 20px;
     display: grid;
     grid-template-columns: 1fr 275px;
 }
@@ -57,7 +58,6 @@ header .logo .title {
 }
 
 .videoPage .videoText .videoTitle h2 {
-    /*width: 720px;*/
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -65,7 +65,6 @@ header .logo .title {
 
 .videoPage .videoContent .content {
     display: inline-block;
-    /*width: 720px;*/
     line-height: 1.2;
 }
 
@@ -104,6 +103,14 @@ header .logo .title {
     opacity: 0.97;
 }
 
+.videoList .addVideo {
+    position: fixed;
+    background-color: white;
+    width: 275px;
+    height: 100px;
+    bottom: 0;
+}
+
 .videoList .playList h4 {
     text-align: center;
 }
@@ -118,6 +125,10 @@ header .logo .title {
     margin-left: 5px;
 }
 
+.nextVideo:last-child {
+    padding-bottom: 100px;
+}
+
 .nextVideo img {
     width: 100px;
     height: auto;
@@ -126,7 +137,27 @@ header .logo .title {
 }
 
 .nextVideo .nextVideoTitle {
-    margin-left: 5px;
-    padding-top: calc(50% - 1em / 2);
+    padding-top: 45%;
     cursor: pointer;
+}
+
+.nextVideo .nextVideoTitle.clicked{
+    background-color: lightgreen;
+}
+
+.nextVideo .nextVideoTitle h5{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.videoList .addVideo {
+    padding-top: 10px;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.videoButtons {
+    font-size: 60px;
 }
