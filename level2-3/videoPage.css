@@ -1,0 +1,163 @@
+:root {
+    --width-full: 100%;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: 'Gruppo', cursive;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    background-color: white;
+    opacity: 0.97;
+    cursor: pointer;
+}
+
+header .logo {
+    font-size: 20px;
+}
+
+header .logo .title {
+    font-size: 30px;
+}
+
+.videoGrid {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 275px;
+}
+
+.videoPage {
+    width: var(--width-full);
+}
+
+.videoPage .videoMain video {
+    display: block;
+    width: var(--width-full);
+    height: 70vh;
+    background-color: darkslategrey;
+}
+
+.videoPage .videoText {
+    display: block;
+    margin: 20px 10px 10px 10px;
+}
+
+.videoPage .videoText .videoTitle h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.videoPage .videoContent .content {
+    display: inline-block;
+    line-height: 1.2;
+}
+
+.videoPage .videoContent .content.more {
+    height: 4.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.videoPage .videoContent .moreBtn {
+    float: right;
+}
+
+.videoList {
+    overflow-y: scroll;
+    height: 95vh;
+    padding-right: 20px;
+    border-style:none;
+
+    scrollbar-face-color:#FFFFFF;
+    scrollbar-3dlight-color:#FFFFFF;
+    scrollbar-highlight-color:#FFFFFF;
+    scrollbar-shadow-color:#000000;
+    scrollbar-darkshadow-color:#FFFFFF;
+    scrollbar-arrow-color:#000000;
+    scrollbar-track-color:#FFFFFF; }
+
+.videoList .playList {
+    width: 275px;
+    position: fixed;
+    background-color: white;
+    opacity: 0.97;
+}
+
+.videoList .addVideo {
+    position: fixed;
+    background-color: white;
+    width: 275px;
+    height: 100px;
+    bottom: 0;
+}
+
+.videoList .playList h4 {
+    text-align: center;
+}
+
+.nextVideos {
+    padding-top: 65px;
+}
+
+.nextVideo {
+    display: grid;
+    grid-template-columns: 100px 170px;
+    margin-left: 5px;
+}
+
+.nextVideo:last-child {
+    padding-bottom: 100px;
+}
+
+.nextVideo img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.nextVideo .nextVideoTitle {
+    padding-top: 45%;
+    cursor: pointer;
+}
+
+.nextVideo .nextVideoTitle.clicked{
+    background-color: lightgreen;
+}
+
+.nextVideo .nextVideoTitle h5{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.videoList .addVideo {
+    padding-top: 10px;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.videoButtons {
+    font-size: 60px;
+}
