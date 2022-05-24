@@ -85,7 +85,7 @@ header .logo .title {
 .videoList {
     overflow-y: scroll;
     height: 95vh;
-    padding-right: 20px;
+    margin-right: 20px;
     border-style:none;
 
     scrollbar-face-color:#FFFFFF;
@@ -98,9 +98,56 @@ header .logo .title {
 
 .videoList .playList {
     width: 275px;
+    height: 65px;
     position: fixed;
     background-color: white;
     opacity: 0.97;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.videoList .playList h4 {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.videoList .playList .controller {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+}
+
+.videoList .playList .controller span {
+    border-style: outset;
+    border-radius: 5px;
+    border-width: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.videoList .playList .controller .sequence {
+
+}
+
+.videoList .playList .controller .sequence.clicked {
+    background-color: lightgreen;
+    border-style: inset;
+}
+
+.videoList .playList .controller .shuffle {
+
+}
+
+.videoList .playList .controller .shuffle.clicked {
+    background-color: lightgreen;
+    border-style: inset;
 }
 
 .videoList .addVideo {
@@ -109,10 +156,10 @@ header .logo .title {
     width: 275px;
     height: 100px;
     bottom: 0;
-}
-
-.videoList .playList h4 {
-    text-align: center;
+    padding-top: 10px;
+    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
 }
 
 .nextVideos {
@@ -149,13 +196,6 @@ header .logo .title {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 10px;
-}
-
-.videoList .addVideo {
-    padding-top: 10px;
-    padding-left: 5px;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
 }
 
 .videoButtons {

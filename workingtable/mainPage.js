@@ -20,7 +20,7 @@ let birdSeries = [
 	['한입에꿀꺽하는새', 'https://drive.google.com/uc?export=download&id=1i4EqSthbyViOeJMFsr7Twm2axVIidOs4', 'https://drive.google.com/uc?export=download&id=1bU9xmLP-LEr0rRoEfMBgcsQK4fNvfgb3']
 ];
 
-localStorage.setItem("key", JSON.stringify(birdSeries));
+localStorage.setItem("birdSeries", JSON.stringify(birdSeries));
 
 function goVideo() {
 	location.href = "videoPage.html?video=" + this.id;
@@ -30,10 +30,10 @@ let wrapper = document.querySelector('.wrapper');
 
 for (let i = 0; i < birdSeries.length; i++) {
 	wrapper.innerHTML +=
-		'<div class="thumbnail">' +
+		'<li class="thumbnail">' +
 		'   <img class="thumb_img" src="' + birdSeries[i][1] + '" alt="' + birdSeries[i][0] + '" title="' + birdSeries[i][0] + '" id="' + birdSeries[i][0] + '">' +
 		'<h4 class="thumb_title" id="' + birdSeries[i][0] + '">' + birdSeries[i][0] + '</h4>' +
-		'</div>';
+		'</li>';
 }
 
 let titles = document.querySelectorAll('h4');

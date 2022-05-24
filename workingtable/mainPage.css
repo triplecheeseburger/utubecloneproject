@@ -31,8 +31,10 @@ header .logo .title {
 }
 
 .wrapper {
-    padding-top: 45px;
+    padding-top: 25px;
+    padding-left: 0;
     display: grid;
+    list-style: none;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-row-gap: 10px;
